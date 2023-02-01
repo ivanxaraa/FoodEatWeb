@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(-45deg, var(--corPrincipal), #000);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+}
+
+.login{
+    width: 100%;
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+
+.login-container{    
+    padding: 40px;
+    border-radius: var(--bordasNormal);
+    background-color: var(--corTexto);    
+}
+
+
+.login-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    flex-direction: column; 
+    gap: 15px;
+    text-align: center;
+}
+
+.login-header svg{
+    margin: auto;
+}
+
+.login-container svg path{
+    stroke: var(--corPrincipal);    
+}
+
+#xxx{
+    fill: var(--corPrincipal);
+}
+
+.login-content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.login-content span{
+    font-size: var(--title);
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.login-content span span{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login-input{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.login-content input{
+    height: 50px;
+    border-radius: var(--bordasNormal);
+    outline: none;
+    border: 1px;
+    background-color: #fafafa;
+    font-family: "Poppins";
+    padding: 5px 15px;    
+    border: 1px solid transparent;
+}
+
+
+
+.login-content button{
+    margin-top: 30px;
+    border: none;
+    width: 100%;
+    background-color: var(--corPrincipal2);
+    height: 60px;
+    border-radius: var(--bordasNormal);
+    color: var(--corTexto);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: var(--subTitle);
+}
+
+
+.login-register{
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-register span{
+    font-size: var(--texto);
+    font-weight: 400;
+}
+
+.login-register a{    
+    font-weight: 600;
+    color: var(--corPrincipal);
+}
+
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.login-header-rest{
+    font-family: "Krona One";
+    text-decoration: none;    
+    color: var(--corPrincipal);
+}
+
+
+
+@media only screen and (max-width: 750px) {
+
+    .login{
+        overflow-y: hidden;
+    }
+
+    .login-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .login-content{
+        min-width: 280px;
+    }
+    
+
+}

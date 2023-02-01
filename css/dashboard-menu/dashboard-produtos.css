@@ -1,0 +1,130 @@
+
+
+.produto-data-img{    
+    aspect-ratio: 1/1;    
+    width: 55px;   
+    height: 55px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;  
+    margin-left: 28px;      
+}
+
+.produto-data-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.produto-data-nome{
+    margin-left: 28px;
+    font-size: var(--subTitle);
+    font-weight: 600;        
+    min-width: 200px;
+}
+
+.produto-data-preco{
+    text-align: end;
+    min-width: 200px;
+    margin-left: 40px;
+    font-size: var(--subTitle);
+    font-weight: 400;    
+}
+
+
+
+/* ALTERAR DADOS PRODUTOS */
+
+.global-span-input-box2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: end;
+}
+
+.produtos-input{    
+    border-radius: var(--bordasNormal);
+    outline: none;
+    border: 1px;    
+    padding: 5px 0px;   
+    font-family: "Poppins";    
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5px;
+    overflow-y: scroll;    
+    max-height: 90px;    
+}
+
+.produtos-ingredientes-column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#btn-pequeno{
+    height: 40px;
+    font-size: 14px;
+}
+
+.cliente-edit-container button{
+    height: 70px;
+    width: 80px;
+}
+
+.categoria-data-quant{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoria-data-quant svg{
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+
+
+
+.drag-area{
+    border: 1px dashed rgba(0, 0, 0, 0.308);    
+    height: 200px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;    
+  }
+  
+ 
+  .drag-area svg{
+    width: 40px;
+    height: 40px;
+    fill: var(--corPrincipal2);
+    margin-bottom: 5px;
+  }
+  
+  .drag-area-text1{
+    font-size: 14px;
+  }
+
+  .drag-area-text2 a{
+    color: var(--corPrincipal2);
+  }  
+  
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+
+

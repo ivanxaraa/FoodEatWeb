@@ -1,0 +1,32 @@
+
+
+.menu-main{    
+    display: flex;
+    gap: 60px;
+}
+
+.menu-left{    
+    flex: 0.65;
+}
+
+.menu-right{
+    flex: 0.35;
+}
+
+
+.menu-categorias-content{
+    margin-top: 18px;
+}
+
+.menu-btn-add{
+    width: 100%;
+    text-align: center;
+    height: 75px;
+    border: none;
+    outline: none;
+    background-color: var(--corTexto);
+    border-radius: var(--bordasMax);
+    font-family: "Poppins";
+    font-size: var(--subTitle);
+    font-weight: 600;
+}

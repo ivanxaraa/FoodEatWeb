@@ -1,0 +1,149 @@
+.dashboard-boxes {
+  width: 100%;
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.dashboard-box {
+  background-color: var(--corTexto);
+  border-radius: var(--bordasNormal);
+  width: 230px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-box-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--corPrincipal2);
+  border-radius: var(--bordasNormal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard-box-icon i{
+  font-size: 18px;
+  color: white;
+}
+
+.dashboard-box-text {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  line-height: 1.2;
+}
+
+.dashboard-box-text :nth-child(1) {
+  font-size: var(--title);
+  font-weight: 600;
+  color: var(--corPrincipal);
+}
+
+.dashboard-box-text :nth-child(2) {
+  font-size: var(--text);
+  font-weight: 600;
+  color: #d7d7d7;
+}
+
+.dashboard-main {
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-main-left {
+  flex: 0.6;
+}
+
+.dashboard-main-title {
+  font-family: "Poppins";
+  font-size: var(--title);
+  font-weight: 600;
+}
+
+.dashboard-spacebtw{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.dashboard-boxes2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  row-gap: 30px;
+}
+
+.dashboard-box2 {
+  background-color: var(--corTexto);
+  border-radius: var(--bordasNormal);
+  width: 230px;
+  height: 60px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-main-right {
+  flex: 0.35;
+}
+
+.dashboard-main-right-history {
+  margin-top: 12px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dashboard-main-right-more{
+  display: flex;
+  justify-content: end;  
+}
+
+
+.dashboard-main-right-more a{
+  font-family: "Poppins";
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--corPrincipal);
+  transition: 0.3s;
+  position: relative;
+}
+
+.dashboard-main-right-more a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--corPrincipal);
+  opacity: 0.5;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.dashboard-main-right-more a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+@media only screen and (max-width: 1550px) {
+  .dashboard-main {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+

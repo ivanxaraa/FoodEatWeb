@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(-45deg, var(--corPrincipal), #000);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+	height: 100vh;
+    color: #fff;
+}
+
+.login{
+    width: 100%;
+    height: 100vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+
+
+.login-container-padding{    
+    padding: 40px;
+    border-radius: 0px 0px var(--bordasNormal) var(--bordasNormal);
+    background-color: var(--corTexto);    
+}
+
+
+.login-header{    
+    border-radius: var(--bordasNormal) var(--bordasNormal) 0px 0px;      
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-header img{
+    border-radius: var(--bordasNormal) var(--bordasNormal) 0px 0px;  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;    
+    position: relative;
+    filter: brightness(0.6);    
+}
+
+
+
+.login-header span{
+    font-weight: 600;
+    position: absolute;
+    font-family: "Krona One";
+    font-size: 38px;
+    color: white;    
+}
+
+.login-container svg path{
+    stroke: var(--corPrincipal);    
+}
+
+#xxx{
+    fill: var(--corPrincipal);
+}
+
+.login-content{
+    display: flex;
+    flex-direction: column;    
+}
+
+.login-content span{
+    font-size: var(--title);
+    font-family: "Poppins";
+    font-weight: 600;
+    color: #000;
+}
+
+.login-input{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.login-content input{
+    height: 50px;
+    border-radius: var(--bordasNormal);
+    outline: none;
+    border: 1px;
+    background-color: #fafafa;
+    font-family: "Poppins";
+    padding: 5px 15px;    
+    border: 1px solid transparent;
+    min-width: 250px;
+}
+
+
+
+.login-content button{
+    margin-top: 30px;
+    border: none;
+    width: 100%;
+    background-color: var(--corPrincipal);
+    height: 60px;
+    border-radius: var(--bordasNormal);
+    color: var(--corTexto);
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: var(--subTitle);
+}
+
+
+.login-register{
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-register span{
+    font-size: var(--texto);
+    font-weight: 400;
+}
+
+.login-register a{    
+    font-weight: 600;
+    color: var(--corPrincipal);
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+

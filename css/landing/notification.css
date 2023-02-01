@@ -1,0 +1,45 @@
+.landing-noti {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: Noti 7s;
+  display: none; 
+}
+.landing-noti-container {
+  padding: 10px 20px;  
+  min-width: 120px;
+  text-align: center;
+  border-radius: 30px;
+  font-family: "Poppins";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--landingCorBg);  
+  border: 1px solid var(--landingCorPrincipal);
+}
+
+.landing-noti-text{   
+  color: #000;  
+}
+
+
+@keyframes Noti {
+    0%   {
+        transform: translate(-50%, 200%);        
+    }
+    10%   {
+        transform: translate(-50%, -50%);        
+    }
+
+    90%   {
+        transform: translate(-50%, -50%);        
+    }
+
+    100%   {
+        transform: translate(-50%, 200%);        
+    }
+    
+  }

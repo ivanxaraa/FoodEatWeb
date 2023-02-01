@@ -1,0 +1,197 @@
+<?php
+session_start();
+if (!isset($_SESSION['uid'])) {
+    session_destroy();
+    header('Location: register-restaurant.php');
+    exit();
+}
+
+
+define('DESC', 'Aplicação Web');
+$html = '';
+$debug = '';
+
+
+$REST_ID = filter_input(INPUT_GET, 'rest_id', FILTER_SANITIZE_NUMBER_INT);;
+
+
+require_once './config.php';
+require_once './core.php';
+
+
+
+
+//1º Categoria a ser carregada
+if (isset($_POST['submit'])) {
+    $categoriaID = filter_input(INPUT_POST, 'submit');
+} else {
+    $pdo = connectDB($db);
+    $sql = "SELECT categoria.id FROM categoria WHERE Restaurante_id = :REST_ID LIMIT 1";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindValue(":REST_ID", $REST_ID, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $rowCategoria = $stmt->fetch();
+    $categoriaID = $rowCategoria['id'];
+}
+//
+
+//Texto/Imagens Restaurante
+$pdo = connectDB($db);
+$sql = "SELECT * FROM restaurante WHERE id = :REST_ID";
+$stmt = $pdo->prepare($sql);
+$stmt->bindValue(":REST_ID", $REST_ID, PDO::PARAM_INT);
+$stmt->execute();
+
+$rowRestaurante = $stmt->fetch();
+
+$arrayRest = array(
+    'nome' => $rowRestaurante['nome'],
+    'img' => $rowRestaurante['img'],
+    'header' => $rowRestaurante['header'],
+    'desc' => $rowRestaurante['desc']
+);
+
+
+
+//
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/variaveis.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/landing/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/landing/header.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/landing/menu.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/landing/menubox.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/landing/modal.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./../css/landing/navmenu.css'>
+</head>
+
+<body>
+
+    <div class="navmenu-overlay" id="navMenu">
+        <div class="navmenu-container">
+            <svg onclick="closeMenu();" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <a>Menu</a>
+            <a>Contacto</a>
+            <a>Não Sei</a>
+            <a>Nada</a>
+        </div>
+    </div>
+
+    <div class='navbar'>
+        <div class='navbar-container'>
+            <svg onclick="openMenu();" class="navbar-icon" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 12L3 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M3 6H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="navbar-name">
+                <?php echo $arrayRest['nome']; ?>
+            </span>
+            <a href="./cliente-register.php?id_rest=3">
+                <svg class="navbar-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="user">
+                        <path id="Vector" d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path id="Vector_2" d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class='header'>
+
+        <span class="header-title"><?php echo $arrayRest['desc']; ?></span>
+        <img src="<?= RESTIMG_WEB_PATH ?><?= $arrayRest['header'] != NULL ? $arrayRest['header'] : RESTIMG_DEFAULT ?>" />
+        <a class="header-circle" href="#menu">
+            <svg viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg" id="scroll">
+                <g id="arrow-down">
+                    <path id="Vector" d="M16.5 6.875V26.125" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                    <path id="Vector_2" d="M26.125 16.5L16.5 26.125L6.875 16.5" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+            </svg>
+        </a>
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="menu-container">
+            <div class="menu-header">
+                <span>Menu</span>
+            </div>
+            <div class="menu-slider">
+                <?php
+                    $pdo = connectDB($db);
+                    $sql = "SELECT * FROM categoria WHERE Restaurante_id = :REST_ID ORDER BY nome DESC";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->bindValue(":REST_ID", $REST_ID, PDO::PARAM_INT);
+                    $stmt->execute();
+                    while ($row = $stmt->fetch()) {
+                        if ($row['nome']) { ?>
+                            <form action="#menu" method="POST">
+                                <button class="menu-chip" value="<?php echo $row['id'];  ?>" type="submit" name="submit"><?php echo $row['nome'];  ?></button>
+                            </form>
+                    <?php }
+                    }
+                ?>
+            </div>
+            <div class="menu-content">
+
+                <?php
+                $pdo = connectDB($db);
+                $sql = "SELECT produto.* from produto INNER JOIN categoria ON produto.Categoria_id = categoria.id WHERE categoria.id = :CAT_ID AND";
+                $stmt = $pdo->prepare($sql);
+                $stmt->bindValue(":CAT_ID", $categoriaID, PDO::PARAM_INT);
+                $stmt->execute();
+                while ($row2 = $stmt->fetch()) {
+                    if ($row2['nome']) { ?>
+                    
+                        <div class="menu-box">
+                            <div class="menubox-container">
+                            <div class="menubox-spacebtw">
+                                <div class="menubox-left">
+                                    <div class="menubox-image">
+                                        <img src="<?= PRODUTOIMG_WEB_PATH ?><?= $row2['img'] != NULL ? $row2['img'] : PRODUTOIMG_DEFAULT ?>" />
+                                    </div>
+                                    <div class="menubox-text">
+                                        <span class="menubox-title"><?php echo $row2['nome'];  ?></span>
+                                        <span class="menubox-price"><?php echo $row2['preco'];  ?> €</span>
+                                    </div>
+                                </div>
+                                <svg class="menubox-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="chevron-up">
+                                        <path id="Vector" d="M6.75098 13.4993L11.251 8.99927L6.75098 4.49927" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                </svg>
+                            </div>
+                            </div>                            
+                        </div>
+
+
+
+                <?php }
+                }
+                ?>
+            
+            </div>
+            <button class="menu-btn-mobile">Ver Carrinho</button> 
+        </div>        
+    </div>
+
+    <script src="../js/landing.js"></script>
+
+</body>
+
+</html>

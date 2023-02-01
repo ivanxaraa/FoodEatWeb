@@ -1,0 +1,78 @@
+
+body{
+    background-color: #fafafa;
+    font-family: "Poppins";
+}
+
+.conta-cliente{
+    padding: 2% 5%;    
+}
+
+.conta-cliente-container{
+    display: flex;    
+    gap: 60px;
+}
+
+.global-alterardados-content-container{
+    width: 500px;
+}
+
+.produto-foto-perfil{
+    width: 40px;
+    aspect-ratio: 1/1;    
+    border-radius: 60px;
+    cursor: pointer;    
+    background-size: cover;
+    position: relative;
+    transition: 0.3s;
+}
+
+.produto-foto-perfil input{
+    display: none;
+    cursor: pointer;
+}
+
+.conta-cliente-lastPedidos{   
+    width: 100%;
+}
+
+.conta-lastPedidos-content{
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.voltar{
+    margin-bottom: 18px;
+}
+
+.voltar .main-title{
+    font-size: 16px;
+}
+
+.voltar .main-title i{
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+
+
+@media only screen and (max-width: 750px) {
+
+    .conta-cliente-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .global-alterardados-content{
+        width: 100%;
+    }
+
+    .global-alterardados-content-container{
+        width: auto;
+    }
+    
+
+}

@@ -1,0 +1,340 @@
+
+.overlay{    
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;    
+    display: none;   
+    animation: PopUpPc 0.5s ease-in-out;  
+}
+
+@keyframes PopUpPc {
+    0% { 
+        transform: translateY(200%); 
+        background-color: rgba(0,0,0,0.0);
+    }
+    100% { 
+        transform: translateY(0px); 
+        background-color: rgba(0,0,0,0.0);
+    }    
+}
+
+.modal-adicionar{
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;       
+    max-height: 740px;   
+}
+
+.modal-adcionar-container{
+    background-color: var(--landingCorBg);
+    border-radius: 26px 26px 0px 0px;     
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    font-family: Poppins;
+    box-shadow: 0px -7px 20px -6px rgba(0,0,0,0.19);
+    z-index: 3;    
+    transition: 1s;
+    padding: 30px;
+}
+
+.modal-adcionar-container button:hover{
+    background-color: var(--landingCorPrincipal);
+    color: var(--landingCorBg);
+}
+
+.modal-adcionar-container button:hover svg path{
+    stroke: var(--landingCorBg);
+}
+
+
+.modal-iphone{
+    position: absolute;
+    background-color: rgb(230, 230, 230);
+    width: 95px;
+    height: 5px;
+    border-radius: 20px;
+    top: 8px;
+    align-self: center;
+}
+
+.modal-adicionar-image{
+    width: 322px;
+    height: 322px;
+    margin-bottom: 22px;
+    align-self: center;
+}
+
+.modal-adicionar-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.modal-adicionar-slider{        
+    width: 100%;
+    margin-bottom: 22px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-adicionar-slider button{
+    outline: none;
+    border: none;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border-radius: 6px;
+}
+
+.modal-adicionar-slider button img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.modal-adicionar-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    margin-bottom: 18px;    
+}
+
+.modal-adicionar-text1{    
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-adicionar-text2{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.modal-adicionar-text2 span{
+    font-size: 18px;
+}
+
+.modal-adicionar-text2 button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid var(--landingCorPrincipal);
+    color: var(--landingCorPrincipal);
+    background-color: var(--landingCorBg);
+    display: flex;
+    align-items: center;
+    justify-content: center;     
+}
+
+.modal-adicionar-text2 button svg path{
+    stroke: var(--landingCorPrincipal);
+}
+
+.modal-adicionar-text2 button:hover{
+    cursor: pointer;
+}
+
+.modal-adicionar-title{
+    font-size: 24px;    
+    font-weight: 500;
+}
+
+.modal-adicionar-title{
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+.modal-adicionar-price{
+    font-size: 18px;    
+    font-weight: 400;
+}
+
+.modal-adicionar-desc{
+    font-size: 14px;   
+    display: block; 
+    margin-bottom: 30px;
+    word-wrap: break-word;
+}
+
+
+
+
+
+
+.modal-adicionar-pc{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 960px;
+    width: 70%; 
+    display: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.modal-adicionar-pc-container{
+    font-family: Poppins;        
+    background-color: var(--landingCorBg);
+    display: flex;
+    padding: 30px;    
+}
+
+.modal-adicionar-pc-container button:hover{
+    background-color: var(--dark);
+    color: var(--landingCorBg);
+}
+
+.modal-adicionar-pc-container button:hover svg path{
+    stroke: var(--landingCorBg);
+}
+
+.moda-adicionar-pc-img{
+    max-height: 300px;         
+      aspect-ratio: 1/1;
+}
+
+.moda-adicionar-pc-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.moda-adicionar-pc-content{
+    padding-left: 28px;
+    width: 100%;
+}
+
+.moda-adicionar-pc-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.moda-adicionar-pc-text1{
+    display: flex;
+    flex-direction: column;    
+}
+
+.moda-adicionar-pc-title{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.moda-adicionar-pc-price{
+    font-size: 24px;
+}
+
+.moda-adicionar-pc-text2{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.moda-adicionar-pc-text2 button{
+    width: 40px;
+    aspect-ratio: 1/1;
+    background-color: var(--dark);
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--dark);
+    background-color: var(--landingCorBg);
+    outline: none;
+    padding: 6px;    
+}
+
+.moda-adicionar-pc-text2 button svg path{
+    stroke: var(--dark);
+}
+
+.moda-adicionar-pc-text2 span{
+    font-size: 18px;
+    font-weight: 400;
+    min-width: 23px;
+    text-align: center;
+}
+
+.modal-adicionar-pc-slider{
+    width: 100%;
+    margin-top: 22px;
+    align-self: center;
+    display: flex;    
+    justify-content: left;
+    gap: 20px;
+}
+
+.modal-adicionar-pc-slider button{
+    outline: none;
+    border: none;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 6px;
+}
+
+.modal-adicionar-pc-slider button img{
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+
+.modal-adicionar-pc-desc{
+    margin-top: 30px;
+    display: block;
+}
+
+.modal-adicionar-pc-btn{    
+    height: 75px;
+    width: 100%;
+    border: 0;
+    font-size: 18px;
+    border: 1px solid var(--dark);
+    color: var(--dark);    
+    background-color: var(--landingCorBg);
+    font-family: 'Krona One', sans-serif;          
+    margin-top: 50px;
+    align-self: center;
+}
+
+
+.overlay-fechar{    
+    width: 100%;
+    height: 100%;
+}
+
+
+  
+
+@media screen and (min-width: 750px) {
+    .modal-adicionar{
+        display: none;
+    }
+    
+    .modal-adicionar-pc{
+        display: block;
+    }        
+}
+
+@media screen and (max-width: 750px) {
+    .modal-adicionar-pc-btn{
+        margin-top: 1px;
+      }
+
+}

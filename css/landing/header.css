@@ -1,0 +1,157 @@
+
+.header{
+    display: flex;
+    color: var(--landingTexto);    
+    justify-content: center;  
+    height: 90vh;    
+    padding: 3%;  
+    
+}
+
+
+.header-title{
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    z-index: 2;
+    font-size: 7vw;
+    line-height: 0.9;
+    font-family: Krona One;
+    text-transform: uppercase;    
+}
+
+.header img{
+    margin-top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 450px;
+    max-height: 720px;    
+}
+
+.header-circle{    
+    width: 50px;
+    height: 50px; 
+    position: absolute;
+    bottom: 3%;
+    text-align: center;
+    z-index: 2;
+    display: flex;      
+    align-items: center;
+    justify-content: center;
+    padding: 10px;    
+    border: solid 1px var(--landingTexto);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+
+
+@media screen and (max-width: 1060px) {
+
+    .header-title{
+        font-size: 8vw;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .header-title{
+        top: 110px;
+        font-size: 8vw;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .header{  
+        padding: 2%; 
+        height: 100vh; 
+    }
+    
+
+    .header-title{
+        top: 80px;
+        font-size: 10vw;
+    }
+
+    .header img{
+        margin-top: 50px;        
+        width: 80%;
+        height: 65%;
+    }
+
+}
+    
+
+
+
+
+.noRestaurante{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    flex-direction: column;
+    bottom: 150px;
+}
+
+.noRestaurante #fill{
+    fill: var(--landingTexto);
+}
+
+.noRestaurante svg path{
+    stroke: var(--landingTexto);    
+}
+
+.noRestaurante-title{
+    font-family: "Krona one";
+    color: var(--landingTexto);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.noRestaurante-restaurantes{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.noRestaurante-restaurante{
+    display: flex;
+    gap: 15px;
+    align-items: center;       
+}
+
+.noRestaurante-name{
+    text-decoration: none;
+    color: var(--landingTexto);
+    font-family: "Krona one";
+    transition: 0.3s;
+    position: relative;
+}
+
+.noRestaurante-name::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--landingTexto);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .noRestaurante-name:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+

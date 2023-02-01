@@ -1,0 +1,75 @@
+
+#settings-main-left{
+  flex: 0.75;
+}
+
+#settings-main-right{
+  flex: 0.25;  
+}
+
+
+.settings-fundo{
+  padding: 40px;
+  background-color: var(--corTexto);
+  border-radius: var(--bordasNormal);
+  display: flex;
+}
+
+.settings-imagens{  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-perfil{
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  aspect-ratio: 1/1;  
+  background-size: cover;
+  border-radius: var(--bordasNormal);
+  position: relative;
+}
+
+.settings-header{
+  cursor: pointer;
+  width: 130px;
+  height: 250px;
+  background-size: cover;
+  border-radius: var(--bordasNormal);  
+  position: relative;
+}
+
+.settings-perfil input, .settings-header input{
+  display: none;  
+}
+
+.settings-perfil img, .settings-header img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: center;
+  border-radius: var(--bordasNormal);
+}
+
+.settings-content{
+  margin-left: 20px;  
+  width: 100%;  
+}
+
+
+.settings-inputs{  
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto;
+}
+
+
+
+#settings-link:hover{
+  background-color: #fafafa;
+  color: var(--corPrincipal);
+}
+
+

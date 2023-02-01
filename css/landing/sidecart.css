@@ -1,0 +1,152 @@
+
+.sidecart{
+    right: 0;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    width: 0px;
+    background-color: var(--landingCorBg);
+    box-shadow: rgba(100, 100, 111, 0.2) -10px 7px 29px 0px;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.sidecart-container{
+    padding: 40px;
+    height: calc(100% - 80px);
+}
+
+.sidecart-header{
+    font-size: 28px;
+    font-family: "Krona one";
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.sidecart-header-text{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.sidecart-mesa{    
+    padding: 10px;
+    background-color: var(--landingCorPrincipal);
+    color: var(--landingCorBg);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.sidecart-header svg{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.sidecart-header svg path, circle{
+    stroke: var(--landingCorPrincipal);
+}
+
+
+.sidecart-spacebtw{    
+    height: calc(100% - 6%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+
+.sidecart-content{
+    margin-top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;    
+    gap: 15px;
+    overflow-y: auto;   
+    overflow-x: hidden;     
+}
+
+.sidecart-content .menu-box{
+    margin-right: 5px;
+}
+
+
+
+
+.menu-box-delete{
+    z-index: 2;          
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--landingCorPrincipal);
+    cursor: pointer;
+}
+
+.menu-box-delete svg{
+    margin-bottom: 0px;
+}
+
+.menu-box-delete:hover{
+    background-color: var(--landingCorPrincipal);
+}
+
+.menu-box-delete:hover svg path{
+    stroke: var(--landingCorBg);
+}
+
+.menu-box-delete svg path{
+    stroke: var(--landingCorPrincipal);
+}
+
+.sidecart-total{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Krona One";
+    margin-bottom: 10px;
+}
+
+.sidecart-btn{
+    height: 75px;
+    width: 100%;
+    border: 0;
+    font-size: 18px;
+    border: 1px solid var(--dark);
+    color: var(--dark);    
+    background-color: var(--landingCorBg);
+    font-family: 'Krona One', sans-serif;          
+    margin-top: 0px;
+    align-self: center;
+}
+
+.sidecart-btn:hover{
+    background-color: var(--landingCorPrincipal);
+    color: var(--landingCorBg);
+}
+
+
+
+
+
+@media screen and (max-width: 720px) {
+    .sidecart-container{
+        padding: 20px;
+    }
+    
+    .sidecart-spacebtw{    
+        height: calc(100% - 0%); 
+    }
+}

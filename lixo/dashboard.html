@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <link rel='stylesheet' href='./css/variaveis.css'>
+    <link rel='stylesheet' href='./css/sidebar.css'>
+    <link rel='stylesheet' href='./css/dashboard/dashboard.css'>
+    <link rel='stylesheet' href='./css/dashboard/dashboard-pedido.css'>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div class="sidebar-container">
+            <div class="sidebar-profile">
+                <div class="sidebar-image"> <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"> </div>
+                <div class="sidebar-text">
+                    <span>FoodEat</span>
+                </div>
+            </div>
+
+            <div class="sidebar-links">
+                <a class="sidebar-link" href="./dashboard.html">
+                    <svg id="gross" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_790_1261)">
+                            <path d="M7.5 1.25L1.25 4.375L7.5 7.5L13.75 4.375L7.5 1.25Z" stroke="black"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M1.25 10.625L7.5 13.75L13.75 10.625" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M1.25 7.5L7.5 10.625L13.75 7.5" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_790_1261">
+                                <rect width="15" height="15" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a class="sidebar-link" href="./Menu.html">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.5 19.5C4.5 18.837 4.76339 18.2011 5.23223 17.7322C5.70107 17.2634 6.33696 17 7 17H20.5"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M7 2H20.5V22H7C6.33696 22 5.70107 21.7366 5.23223 21.2678C4.76339 20.7989 4.5 20.163 4.5 19.5V4.5C4.5 3.83696 4.76339 3.20107 5.23223 2.73223C5.70107 2.26339 6.33696 2 7 2V2Z"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Menu</span>
+                </a>
+                <a class="sidebar-link">
+                    <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.5 4.5H18.5C19.0304 4.5 19.5391 4.71071 19.9142 5.08579C20.2893 5.46086 20.5 5.96957 20.5 6.5V20.5C20.5 21.0304 20.2893 21.5391 19.9142 21.9142C19.5391 22.2893 19.0304 22.5 18.5 22.5H6.5C5.96957 22.5 5.46086 22.2893 5.08579 21.9142C4.71071 21.5391 4.5 21.0304 4.5 20.5V6.5C4.5 5.96957 4.71071 5.46086 5.08579 5.08579C5.46086 4.71071 5.96957 4.5 6.5 4.5H8.5"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15.5 2.5H9.5C8.94772 2.5 8.5 2.94772 8.5 3.5V5.5C8.5 6.05228 8.94772 6.5 9.5 6.5H15.5C16.0523 6.5 16.5 6.05228 16.5 5.5V3.5C16.5 2.94772 16.0523 2.5 15.5 2.5Z"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <span>Pedidos</span>
+                </a>
+                <a class="sidebar-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88"
+                            stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Clientes</span>
+                </a>
+            </div>
+
+            <div class="sidebar-logout">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9"
+                        stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M16 17L21 12L16 7" stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M21 12H9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Logout</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="dashboard-boxes">
+            <div class="dashboard-box">
+                <div class="dashboard-box-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="dashboard-box-text">
+                    <span>48</span>
+                    <span>Pedidos</span>
+                </div>
+            </div>
+            <div class="dashboard-box">
+                <div class="dashboard-box-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="dashboard-box-text">
+                    <span>48</span>
+                    <span>Pedidos</span>
+                </div>
+            </div>
+            <div class="dashboard-box">
+                <div class="dashboard-box-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="dashboard-box-text">
+                    <span>48</span>
+                    <span>Pedidos</span>
+                </div>
+            </div>
+            <div class="dashboard-box">
+                <div class="dashboard-box-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16 4H18C18.5304 4 19.0391 4.21071 19.4142 4.58579C19.7893 4.96086 20 5.46957 20 6V20C20 20.5304 19.7893 21.0391 19.4142 21.4142C19.0391 21.7893 18.5304 22 18 22H6C5.46957 22 4.96086 21.7893 4.58579 21.4142C4.21071 21.0391 4 20.5304 4 20V6C4 5.46957 4.21071 4.96086 4.58579 4.58579C4.96086 4.21071 5.46957 4 6 4H8"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M15 2H9C8.44772 2 8 2.44772 8 3V5C8 5.55228 8.44772 6 9 6H15C15.5523 6 16 5.55228 16 5V3C16 2.44772 15.5523 2 15 2Z"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="dashboard-box-text">
+                    <span>48</span>
+                    <span>Pedidos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-main">
+            <div class="dashboard-main-left">
+
+                <span class="dashboard-main-title">Vendas</span>
+                <div class="dashboard-main-chart-container">
+                </div>
+
+                <div class="dashboard-boxes2">
+                    <div class="dashboard-box2">
+                        Ainda
+                    </div>
+                    <div class="dashboard-box2">
+                        Não
+                    </div>
+                    <div class="dashboard-box2">
+                        Sei
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="dashboard-main-right">
+                <span class="dashboard-main-title">Historico de Pedidos</span>
+                <div class="dashboard-main-right-history">
+
+
+                    <div class="dashboard-pedido">  
+                        <div class="dashboard-pedido-click">
+                            <div class="dashboard-pedido-left">
+                                <div class="dashboard-pedido-status-circle"></div>
+                                <span class="dashboard-pedido-mesa">Mesa 14</span>
+                            </div>
+                            <div class="dashboard-pedido-right">
+                                <span class="dashboard-pedido-precototal">29.54 €</span>
+                                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.25 9.375L12.5 15.625L18.75 9.375" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dashboard-pedido-openned">
+                            <div class="dashboard-pedido-openned-bar"></div>
+                            <div class="dashboard-pedido-openned-content">
+                                <div class="dashboard-pedido-item">
+                                    <div class="dashboard-pedido-item-left">
+                                        <img src="https://source.unsplash.com/2Cb1cZVh8_k"/>
+                                        <div class="dashboard-pedido-item-text">
+                                            <span class="title">Especial Fara</span>
+                                            <span class="price">37.35 €</span>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-pedido-item-right">
+                                        <span class="dashboard-pedido-item-quantidade">15234</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="dashboard-pedido">  
+                        <div class="dashboard-pedido-click">
+                            <div class="dashboard-pedido-left">
+                                <div class="dashboard-pedido-status-circle"></div>
+                                <span class="dashboard-pedido-mesa">Mesa 14</span>
+                            </div>
+                            <div class="dashboard-pedido-right">
+                                <span class="dashboard-pedido-precototal">29.54 €</span>
+                                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.25 9.375L12.5 15.625L18.75 9.375" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="dashboard-pedido-openned">
+                            <div class="dashboard-pedido-openned-bar"></div>
+                            <div class="dashboard-pedido-openned-content">
+
+                                <div class="dashboard-pedido-item">
+                                    <div class="dashboard-pedido-item-left">
+                                        <img src="https://source.unsplash.com/2Cb1cZVh8_k"/>
+                                        <div class="dashboard-pedido-item-text">
+                                            <span class="title">Especial Fara</span>
+                                            <span class="price">37.35 €</span>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-pedido-item-right">
+                                        <span class="dashboard-pedido-item-quantidade">15234</span>
+                                    </div>
+                                </div>
+                                <div class="dashboard-pedido-item">
+                                    <div class="dashboard-pedido-item-left">
+                                        <img src="https://source.unsplash.com/2Cb1cZVh8_k"/>
+                                        <div class="dashboard-pedido-item-text">
+                                            <span class="title">Especial Fara</span>
+                                            <span class="price">37.35 €</span>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-pedido-item-right">
+                                        <span class="dashboard-pedido-item-quantidade">15234</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>  
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
+

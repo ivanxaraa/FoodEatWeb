@@ -1,0 +1,117 @@
+
+.dashboard-pedido{  
+    border: none;  
+    outline: none;    
+    border-radius: var(--bordasMax);
+    background-color: var(--corTexto);
+     
+}
+
+.dashboard-pedido-click{
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;   
+    font-family: "Poppins"; 
+    justify-content: space-between;
+}
+
+.dashboard-pedido-click:hover{
+    cursor: pointer;
+}
+
+.dashboard-pedido-left, .dashboard-pedido-right{
+    display: flex;
+    align-items: center;   
+}
+
+
+.dashboard-pedido-status-circle{
+    width: 18px;
+    height: 18px;
+    background-color: #8CFF98;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+
+.dashboard-pedido-mesa{
+    font-weight: 600;
+    margin-left: 38px;
+    font-size: var(--title);    
+}
+
+.dashboard-pedido-precototal{
+    font-size: var(--title);  
+    margin-right: 18px;
+}
+
+.dashboard-pedido-click svg{
+    width: 24px;
+    height: 24px;
+}
+
+.dashboard-pedido-openned-bar{
+    width: 100%;
+    height: 2px;
+    background-color: #F4F4F4;
+}
+
+.dashboard-pedido-openned{
+    display: none;
+    padding: 0px 40px;          
+}
+
+
+
+
+.dashboard-pedido-openned-content{
+    padding-top: 20px;
+    padding-bottom: 20px;    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dashboard-pedido-item{
+    padding: 10px;
+    border-radius: var(--bordasNormal);
+    background-color: var(--corBackground);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.dashboard-pedido-item-left, .dashboard-pedido-item-right{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-pedido-item img{
+    width: 75px;
+    aspect-ratio: 1/1;
+    border-radius: var(--bordasNormal);
+}
+
+.dashboard-pedido-item-text{
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.dashboard-pedido-item-text .title{
+    font-size: var(--subTitle);
+    font-weight: 500;
+}
+
+.dashboard-pedido-item-text .price{
+    font-size: var(--text);
+    font-weight: 400;
+}
+
+.dashboard-pedido-item-quantidade{
+    text-align: end;
+    font-family: "Poppins";
+}
+

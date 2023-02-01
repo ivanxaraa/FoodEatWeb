@@ -1,0 +1,216 @@
+.menu{
+  width: 100%;
+  transition: 0.5s linear;  
+}
+
+
+.menu-container {
+  padding: 5% 3%;
+  background-color: var(--landingCorBg);
+  position: relative;  
+  height: 82vh;
+}
+
+.menu-circle-cart-pc{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid var(--landingCorPrincipal);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-circle-cart-pc svg{
+  width: 35px;
+  height: 35px;
+}
+
+.menu-circle-cart-pc svg path{
+  stroke: var(--landingCorPrincipal);  
+  stroke-width: 1;
+}
+
+.menu-header {
+  display: flex;
+  font-family: "Krona One";
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.menu-slider {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+
+
+.menu-chip {
+  padding: 8px 16px;
+  border: 1px solid var(--landingCorPrincipal);
+  background-color: var(--landingCorBg);
+  border-radius: 30px;
+  font-size: var(--texto);
+  font-family: "Krona One";
+  text-decoration: none;
+  color: var(--landingCorPrincipal);
+}
+
+.active{
+  background-color: var(--landingCorPrincipal);
+  color: var(--landingCorBg);
+}
+
+.menu-content {
+  margin-top: 20px;
+  display: grid;    
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;   
+  overflow-y: auto;  
+  overflow-x: hidden;
+  transition: 0.5s;
+  width: 95%;  
+}
+
+
+
+.menu-box {
+  position: relative;
+  outline: none;
+  border: none;
+  width: 330px;    
+  border-radius: var(--bordasNormal);  
+  cursor: pointer;
+  background-color: var(--landingCorBox);
+  transition: 0.3s;
+}
+
+
+
+.menubox-container{
+    padding: 10px;    
+}
+
+
+
+.menubox-spacebtw {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menubox-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.menubox-image {
+  height: 60px;  
+  width: 60px;  
+}
+
+.menubox-image img {
+  border-radius: var(--bordasNormal);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menubox-text {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  font-family: "Poppins";
+}
+
+.menubox-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.menubox-price {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.menubox-icon {
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateX(-10px);
+}
+
+.menu-box:hover .menubox-icon {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+.menu-btn-mobile{   
+    display: none; 
+    height: 75px;
+    width: 100%;
+    border: 1px solid var(--landingCorPrincipal);
+    color: var(--landingCorPrincipal);
+    font-size: 18px;
+    background-color: var(--landingCorBg);
+    color: var(--landingCorPrincipal);    
+    font-family: 'Krona One', sans-serif;          
+    cursor: pointer;    
+}
+
+
+@media screen and (max-width: 1600px) {
+  .menu{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .menu-box {
+    width: 100%;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  .menu-btn-mobile{
+    display: block;
+  }
+
+  .menu-container {
+    height: 93vh;    
+  }
+
+
+  .menu-header {
+    font-size: 28px;
+  }
+
+  .menu-content {
+    gap: 10px;    
+    height: 68%; 
+    padding-bottom: 20px;  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;        
+  }
+
+  .menu-circle-cart-pc{
+    display: none;
+  }
+  
+
+}
+

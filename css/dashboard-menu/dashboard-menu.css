@@ -1,0 +1,68 @@
+
+.cliente-databox:hover .categoria-databox-click{
+    transform: translateX(-180px);
+}
+
+
+
+.categoria-databox-click{   
+    padding: var(--BoxesPad);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;    
+    background-color: var(--corTexto);
+    border-radius: 0px; 
+    transition: all 0.3s 0.1s cubic-bezier(0.39, 0.58, 0.57, 1); 
+    min-width: 500px;
+    position: relative;
+    font-family: "Poppins";
+}
+
+.categoria-databox-button{
+    text-decoration: none;
+    color: #000;
+    height: var(--BoxesAltura);
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.categoria-data-nome{
+    margin-left: 20px;
+    font-size: var(--subTitle);
+    font-weight: 400;
+}
+
+.categoria-data-quant{
+    font-size: var(--subTitle);
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.categoria-data-icon{
+    width: 18px;
+    height: 18px;
+    rotate: -90deg;
+    transition: ease-in-out 0.3s;
+}
+
+.categoria-alterar-title-icon{
+    width: 18px;
+    height: 18px;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.categoria-data-produtos{    
+    margin-right: 20px;  
+    transition: 0.3s;
+    font-family: "Poppins";
+    text-decoration: none;    
+}
+
+
